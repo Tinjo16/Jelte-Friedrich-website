@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>home</title>
+</head>
+<body>
+    <header>
+        <label for="toggle-menu" class="menu-icon"></label>
+        <input type="checkbox" id="toggle-menu">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="leistungen.html">Leistungen</a>
+                    <label for="toggle-submenu" class="submenu-icon"></label>
+                    <input type="checkbox" id="toggle-submenu">
+                    <ul id="responsive" class="submenu">
+                        <li id="space_home"><a href="hunde.html">Hunde</a></li>
+                        <li class="space_katze"><a href="katzen.html">Katzen</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">über uns</a>
+                </li>
+                <li>
+                    <a href="#">Galerie</a>
+                </li>
+                <li class="active_mobil" id="active_desktop">
+                    <a href="belegung_und_buchung.html">Belegung und Buchung</a>
+                </li>
+                <li>
+                    <a href="#">Preise</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="buchungs_article">
+            <div class="Logo_grid">
+                <a href="../index.html"><img class="Logo_leistungen" src="../images/Logo/Logo.svg" alt="Hansepfote Logo"></a>
+                <h1 class="leistungs_h1">Belegung und Buchung</h1>
+            </div>
+            <div id="kalender_grid">
+
+                    <img id="kalender_1" src="../images/Buchung/Hunde.png" alt="Buchung für Hunde">
+                    <img id="kalender_2" src="../images/Buchung/Katze.png" alt="Buchung für Katzen">
+            </div>
+              <div id="buchungs_img">
+                  <img src="../images/inhaberin_03.jpg" alt="Inhaberin mit Hund">
+              </div>
+              <p id="draht">Ihr direkter Draht zu uns
+                <a href="mailto:info@hansepfote.de">info@hansepfote.de</a>
+                oder (0 40) 33 30 36- 0</p>
+                <h2 id="form_h2">Gleich Buchung anfragen</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Harald" id="name" name="name" required>
+    
+                    <label for="vorname">Vorname:</label>
+                    <input type="text" placeholder="Müller" id="vorname" name="vorname" required>
+    
+                    <label for="tier">Tier:</label>
+                    <input type="text" placeholder="Hund/Katze" id="tier" name="tier" required>
+                
+                    <label for="rasse">Rasse:</label>
+                    <input type="text" placeholder="Mischling, etc" id="rasse" name="rasse" required>
+    
+                    <label for="betreuung">Art der gewünschten Betreuung:</label>
+                    <select id="betreuung" name="betreuung">
+                        <option>auswählen</option>
+                        <option>Housekeeping</option>
+                        <option>Betreuung</option>
+                    </select>
+    
+                    <label for="telefon">Telefon:</label>
+                    <input type="tel" placeholder="+49" id="telefon" name="telefon" required>
+    
+                    <label for="email">E-Mail:</label>
+                    <input type="email" placeholder="Harald@beispiel.com" id="email" name="email" required>
+                
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" placeholder="Nachricht" name="message" required></textarea>
+                
+                    <button id="buchungs_button" type="submit">Absenden</button>
+                  </form>
+        </article>
+        <a class="contact_button" href="#">Kontakt</a>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#"><img src="../icon/Instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="../icon/facebook.svg" alt=""></a></li>
+            <li><a href="#">Impressum</a></li>        
+        </ul>
+    </footer>
+</body>
+</html>

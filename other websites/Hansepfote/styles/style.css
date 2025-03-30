@@ -1,0 +1,1510 @@
+/*alle Seiten*/
+
+    @font-face {
+        src: url("../fonts/SignikaNegative-SemiBold.ttf") format("truetype");
+        font-family: "Signika Negative semibold";
+    }
+
+    @font-face {
+        src: url("../fonts/SignikaNegative-Bold.ttf") format("truetype");
+        font-family: "Signika Negative bold";
+    }
+
+    @font-face {
+        src: url("../fonts/SignikaNegative-Light.ttf") format("truetype");
+        font-family: "Signika Negative light";
+    }
+
+    @font-face {
+        src: url("../fonts/SignikaNegative-Medium.ttf") format("truetype");
+        font-family: "Signika Negative medium";
+    }
+
+    @font-face {
+        src: url("../font/SignikaNegative-Regular.ttf") format("truetype");
+        font-family: "Signika Negative regular";
+    }
+
+    h1, h2, h3, p, a, li, th, td, label, option {
+        font-family: Signika Negative regular, Arial, Helvetica, sans-serif;
+    }
+
+    h2, h3, p, a, th, td, li {
+        color: #333333;
+    }
+
+    nav ul li a, footer ul li a {
+       color: #F5F5DC;
+       text-decoration: none;
+       transition: color 0.2s
+    }
+
+    a {
+        color: #333333;
+        transition: color 0.2s
+     }
+
+    h1 {
+        color: #AE6E55;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+
+    body {
+        background-color: #F5F5DC;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    a:hover {
+        color: #AE6E55;
+    }
+
+    
+    .contact_button {
+        position: fixed;
+        bottom: 8%;
+        right: 1%;
+        background-color: #476600;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        padding: 1.2%;
+        text-decoration: none;
+      }
+
+    .contact_button:hover {
+        transform: scale(1.1);
+        transition: 0.4s;
+    }
+
+    #buchungs_button:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+        text-decoration: underline;
+        background-color: #AE6E55;
+        color: white;
+    }
+
+    /*nav*/
+
+        #active_desktop {
+            border-bottom: solid #AE6E55 5px;
+        }
+
+        .active {
+            border-bottom: solid #AE6E55 5px;
+        }
+
+        #toggle-menu {
+            display: none;
+        }
+       
+        
+        nav, nav ul li ul {
+            background-color: #476600;
+            position: fixed;
+        }
+
+        nav ul li {
+            color: white;
+            position: relative;
+            padding: 1%;
+            font-size: 1.4rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        nav ul li ul {
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            left: 0;
+            padding: 10% 40% 10% 10%;
+            border-radius: 5px;
+        }
+
+        .submenu {
+            margin-top: 3%;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul li a {
+        
+            border-left: 6px solid #AE6E55;
+            padding: 0 0 0 10%;
+        }
+
+        .space_home {
+            margin: 15% 0px 10px 0px;
+            padding-bottom: 10%;
+        }
+
+        .space_katze {
+            margin-top: 15%;
+            padding-bottom: 10%;
+        }
+
+        #toggle-submenu {
+            display: none;
+        }
+
+        
+           
+
+    /*footer*/
+
+        footer {
+            width: 100%;
+            display: flex;
+            background-color: #476600;
+            position: absolute;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        footer li {
+            padding: 20%;
+        }
+
+        footer ul {
+            padding: 0 3% 0 3%;
+            display: flex;
+        }
+
+        .menu {
+            width: 100%;
+        }
+
+/*desktop*/
+
+    /* home */
+
+        .Logo_home {
+            width: 80%;
+            padding: 10% 0 0 10%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+        }
+
+        #home_hanse {
+            font-size: 5rem;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #AE6E55;
+            margin: 0 0 1% 0;
+        }
+
+        .grid_home {
+            display: grid;
+            grid-template-columns: 0.4fr 1fr 0.4fr;
+            grid-template-rows: 4fr;
+        }
+
+        #home_img1 {
+            object-position: 0 -300px;
+            width: 100%;
+        }
+
+        #home_img2 {
+            object-position: 0 -193px;
+            width: 100%;
+        }
+
+        #p1, #p3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+        }
+
+        #p2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+        }
+
+        #p1, #p3 {
+            margin-top: 5%;
+            font-size: 1.6rem;
+        }
+
+        #p2, #p3 {
+            margin-bottom: 5%;
+            font-size: 1.6rem;
+        }
+
+        .text_focus_border {
+            border-left: 6px solid #AE6E55;
+            padding-left: 2%;
+        }
+
+        #main_header {
+            display: grid;
+            grid-template-columns: 0.2fr 1fr 0.2fr;
+            grid-template-rows: 6fr;
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        #extra_space2 {
+            margin-top: 1%;
+            font-size: 2rem;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        #extra_space {
+            font-size: 2rem;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        #extra_space3 {
+            margin: 1% 0 3% 0;
+            font-size: 2rem;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+
+        #main_header h1 {
+            margin: 1% 0 0% 0;
+        }
+
+        .home_overflow {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            max-height: 535px;
+            overflow: hidden;
+        }
+
+        .marken_logo {
+            width: 15%;
+        }
+
+        #img_home {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20%;
+        }
+
+    /*Belegung und Buchung*/
+
+        article h1 {
+            margin-top: 3%;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        #buchungs_article {
+            display: flex;
+            flex-direction: column;
+            padding-top: 3%;
+        }
+
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 2% 0 2% 0;
+        }
+        
+        th, td {
+            padding: 8px;
+            border: 3px solid #AE6E55;
+        }
+        
+        th {
+            text-align: left;
+            font-size: larger;
+        }
+
+        tr:first-child th {
+            border-top: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:first-child, th:first-child {
+            border-left: none;
+        }
+
+        td:last-child, th:last-child {
+            border-right: none;
+        }
+
+        #buchungs_img {
+            width: 90%;
+            max-height: 500px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        
+        #buchungs_img img {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        #draht {
+            font-size: 1.3rem;
+            margin-top: 3%;
+            align-self: center;
+        }
+
+        #Kalender_p {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 5% 0 0 0;
+            width: 100%;
+        }
+
+        #Kalender_p p {
+            font-size: 3rem;
+        }
+
+        #kalender_grid {
+            margin: 1% 0 5% 0;
+        }
+
+        #kalender_1, #kalender_2 {
+            width: 60%;
+        }
+
+        #kalender_grid {
+            display: grid;
+            grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+            grid-template-rows: 2fr;
+        }
+
+        #kalender_1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            display: flex;
+            justify-self: center;
+        }
+        
+        #kalender_2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            display: flex;
+            justify-self: center;
+        }
+        
+        /* Kontakt */
+
+        #form_h2 {
+            margin-top: 10%;
+            font-size: 2.6rem;
+            align-self: center;
+        }
+
+        form {
+            display: flex;
+            width: 80%;
+            margin-top: 1%;
+            flex-direction: column;
+            margin-bottom: 10%;
+            align-self: center;
+        }           
+
+        form input, textarea, select, button {
+            border: 2px solid #AE6E55;
+            border-radius: 3px;
+            padding: 1%;
+            margin-bottom: 1%;
+        }
+
+    /*Leistungen*/
+
+        .leistungs_h1 { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Logo_grid {
+            display: grid;
+            grid-template-columns: 0.2fr 1fr 0.2fr;
+            grid-template-rows: 1fr;
+            padding-top: 3%;
+        }
+
+        .Logo_leistungen {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 80%;
+            padding: 10% 0 0 10%;
+        }
+
+        .Leist_t1 {
+            font-size: 1.6rem;
+        }
+
+        .Leist_t2 {
+            font-size: 2rem;
+        }
+
+        #leistungs_article {
+            padding-top: 3%;
+        }
+
+        #leistungs_article, #leistungs_article2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #leistungs_article2 {
+            align-items: center;
+        }
+
+        #leistungs_article div:not(:first-child) {
+            margin: 3% 20% 0 20%;
+        }
+
+        #leistungs_article p {
+            border-left: 6px solid #AE6E55;
+            padding-left: 2%;
+        }
+
+        #leistungs_article2 {
+            margin-top: 5%;
+        }
+
+        #beide_kartsten {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        #beide_kartsten div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #beide_kartsten div h2 {
+            font-size: 2.4rem;
+            margin-bottom: 5%;
+        }
+
+        #beide_kartsten div div {
+            display: flex;
+            background-color: #AE6E55;
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.28);
+        }
+
+        #beide_kartsten div div a {
+            display: flex;
+            justify-content: center;
+        }
+
+        #icon1 {
+            width: 70%;
+        }
+
+        #icon2 {
+            width: 45%;
+            padding-right: 8%;
+        }
+
+        .goeßer_hover:hover {
+            scale: 110%; 
+            transition: 0.6s;
+        }  
+
+    /*Hunde/katzen*/
+
+        #HK_h1 {
+            display: flex;
+            justify-content: center;
+            margin: 3% 0 3% 0;
+            font-size: 4rem;
+        }
+
+
+        #mitt_für_H_und_K {
+            display: grid;
+            grid-template-columns: 0.4fr 1fr 1fr 0.4fr;
+            grid-template-rows: 1fr 1fr 0.3fr 0.3fr;
+        }
+
+        #paket1, #paket2, #paket3 {
+            display: flex;
+            background-color: #AE6E55;
+            max-width: 500px;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.28);
+        }
+
+        #anordnung h2, #anordnung1 h2, #anordnung2 h2 {
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            max-width: 300px;
+            margin-bottom: 5%;
+        }
+
+        #anordnung p, #anordnung2 p, #anordnung1 p {
+            max-width: 350px;
+            border-left: 6px solid #AE6E55;
+            padding-left: 2%;
+            margin-bottom: 3%;
+            font-size: 1.6rem;
+        }
+
+        #anordnung {
+            grid-column-start: 2;
+            grid-row-start: 1;
+        }
+
+        #anordnung1 {
+            grid-column-start: 2;
+            grid-row-start: 2;
+        }
+
+        #anordnung2 {
+            grid-column-start: 2;
+            grid-row-start: 3;
+        }
+
+        #image1 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 100%;
+            display: flex;
+            align-self: center;
+            border-radius: 10px;
+        }
+
+        #image2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            display: flex;
+            align-self: center;
+            border-radius: 10px;
+        }
+
+        #image3 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            width: 100%;
+            display: flex;
+            align-self: center;
+            border-radius: 10px;
+        }
+
+        #paket1 ol li, #paket2 ol li, #paket3 ol li {
+            margin: 8% 1% 5% 13%;
+            font-size: 1.4rem;
+            color: white;
+            padding-left: 2%;
+        }
+
+        .extra_p {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            font-size: 2rem;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        #bone {
+            z-index: -1;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 5;
+            opacity: 7%;
+            padding: 10% 0 0 10%;
+            background-image: url(../icon/bone.svg);
+            background-size: 30%;
+            background-repeat: space;
+        }
+
+        #paw {
+            z-index: -1;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 5;
+            opacity: 7%;
+            padding: 10% 0 0 10%;
+            background-image: url(../icon/paw.svg);
+            background-size: 30%;
+            background-repeat: space;
+        }
+
+        /*Icons*/
+
+            .auslauf {
+                list-style-image: url(../icon/auslauf.svg);
+            }
+
+            .schlafen {
+                list-style-image: url(../icon/schlafen.svg);
+            }
+
+            .fressnapf {
+                list-style-image: url(../icon/Fressnapf.svg);
+            }
+
+            .ausfueren {
+                list-style-image: url(../icon/ausfuehren.svg);
+            }
+
+            .training {
+                list-style-image: url(../icon/training.svg);
+            }
+
+            .waschi {
+                list-style-image: url(../icon/waschen.svg);
+            }
+
+            .auslauf_katze {
+                list-style-image: url(../icon/auslauf_katze.svg);
+            }
+
+            .spielrei_katze {
+                list-style-image: url(../icon/spielrei_katze.svg);
+            }
+        
+            .waschi_katze {
+                list-style-image: url(../icon/waschi_katze.svg);
+            }
+
+/* mobile */
+
+    @media only screen and (max-width: 399px) {
+
+        /*nav*/
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5%;
+            padding-top: 5%;
+        }
+
+        nav {
+            background-color: #F5F5DC;
+            max-width: 35%;
+            border-radius: 0 10px 10px 0;
+            padding-right: 5%;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: static;
+            padding: 0% 0% 0% 0%;
+            border-radius: 0 0 10px 0;
+        }
+
+        nav ul li:hover > ul {
+            display: none;
+          }
+
+        nav ul li {
+            margin-bottom: 15%;
+        }
+
+        #responsive {
+            border-radius: 10px;
+        }
+
+        /*menu*/
+
+            #toggle-menu {
+                display: block;
+                }
+           
+
+            .menu-icon {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background-image: url(../icon/menu.svg);
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-size: 120%;
+                background-repeat: no-repeat;
+                margin: 2% 0 0 2%;
+            }
+
+            .menu {
+                display: none;
+            }
+            
+            #toggle-menu:checked ~ .menu {
+                display: block;
+            }
+
+            #toggle-menu:checked ~ nav {
+                background-color: #476600;
+            }
+
+            #toggle-menu {
+                display: none;
+            }
+
+            .active {
+               border-bottom: none;
+            }
+
+        /*submenu*/
+
+            .active_mobil {
+                border-bottom: solid #AE6E55 5px;
+            }
+
+            .submenu-icon {
+                display: inline-block;
+                width: 28px;
+                height: 18px;
+                background-image: url(../icon/down.svg);
+                background-size: cover;
+                background-position: center;
+                cursor: pointer;
+                background-size: 85%;
+                background-repeat: no-repeat;
+                margin-top: 10%;
+            }
+            
+            .submenu {
+                display: none;
+            }
+            
+            #toggle-submenu:checked ~ .submenu {
+                display: block;
+            }
+
+            #toggle-submenu {
+                display: none;
+            }
+
+    /*home*/
+
+        #main_header {
+            grid-template-columns: 0.1fr 1fr 0.1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        #main_header a {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        #home_hanse {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            font-size: 2.7rem;
+            margin-bottom: 3%;
+        }
+
+        .grid_home {
+            grid-template-columns: 0.2fr 1fr 0.2fr;
+        }
+
+        #extra_space, #extra_space2, #extra_space3 {
+            font-size: 1.2rem;
+        }
+
+        #p1, #p3, #p2 {
+            font-size: 0.9rem;
+        }
+
+        .contact-icon {
+            font-size: 1rem;
+        }
+
+        #home_img1 {
+            object-position: 0 0;
+            width: 100%;
+        }
+
+        #home_img2 {
+            object-position: 0 0;
+            width: 100%;
+        }
+
+        #p3 {
+            margin-bottom: 10%;
+        }
+
+        #form_div {
+            margin-bottom: 35%;
+        }
+
+        .contact-icon {
+            background-position: right;
+        }
+
+        #img_home {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 45%;
+        }
+
+        #img_home img{
+            height: 100%;
+        }
+
+    /*Belegung und Buchung*/
+
+        .Logo_grid {
+            grid-template-columns: 0.2fr 1fr 0.2fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .Logo_grid a {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .leistungs_h1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        .Logo_leistungen {
+            padding: 0;
+        }
+
+        #buchungs_img {
+            width: 90%;
+            max-height: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+        
+        #buchungs_img img {
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #kalender_grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 4fr;
+        }
+
+        #kalender_1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            display: flex;
+            justify-self: center;
+        }
+        
+        #kalender_2 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            display: flex;
+            justify-self: center;
+        }
+
+        #form_h2 {
+            margin-top: 10%;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            width: 80%;
+            margin-top: 1%;
+            flex-direction: column;
+            margin-bottom: 25%;
+        }
+
+        /*Leistungen*/
+
+        .leistungs_h1 {
+            font-size: 2.7rem;
+        }
+
+        .Leist_t1 {
+            font-size: 0.9rem;
+        }
+
+        .Leist_t2 {
+            font-size: 1.2rem;
+        }
+
+        #beide_kartsten div h2 {
+            font-size: 1.8rem;
+        }
+
+        .extra_p {
+            font-size: 1.1rem;
+        }
+
+        .contact-icon_l {
+            font-size: 1rem;
+        }
+
+        #beide_kartsten {
+            flex-direction: column;
+        }
+
+        #beide_kartsten div {
+            margin: 3% 0 15% 0;
+        }
+
+        #beide_kartsten div div {
+            display: flex;
+            background-color: #AE6E55;
+            width: 200px;
+            height: 200px;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.28);
+        }
+
+        #form_div_l {
+            margin-bottom: 35%;
+        }
+
+        .contact-icon_l {
+            background-position: right;
+        }
+
+        /*Hunde/Katzen*/
+
+        #HK_logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #HK_h1 {
+            font-size: 2.7rem;
+        }
+
+        #anordnung h2, #anordnung1 h2, #anordnung2 h2 {
+            font-size: 1.5rem;
+        }
+
+        #anordnung p, #anordnung2 p, #anordnung1 p {
+            font-size: 1rem;
+        }
+
+        #paket1 ol li, #paket2 ol li, #paket3 ol li {
+            font-size: 1rem;
+        }
+            
+        #mitt_für_H_und_K {
+            grid-template-columns: 0.1fr 1fr 0.1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr 0.3fr 0.2fr;
+        }
+
+        #image1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            align-self: normal;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #image2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            align-self: normal;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #image3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #anordnung {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #anordnung1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #anordnung2 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .extra_p {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 7;
+            grid-row-end: 8;
+        }
+
+        #form_div_HK {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 8;
+            grid-row-end: 9;
+        }
+
+        .contact-icon_HK {
+            background-position: right;
+        }
+    }
+
+/*tablet*/
+    
+    @media only screen and (min-width: 400px) and (max-width: 768px) {
+
+        /*nav*/
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5%;
+                padding-top: 5%;
+            }
+
+            nav {
+                background-color: #F5F5DC;
+                max-width: 35%;
+                border-radius: 0 10px 10px 0;
+            }
+
+            nav ul li ul {
+                display: none;
+                position: static;
+                padding: 0% 0% 0% 0%;
+                max-width: 35%;
+                border-radius: 0 0 10px 0;
+            }
+
+            nav ul li:hover > ul {
+                display: none;
+                }
+
+            nav ul li {
+                margin-bottom: 5%;
+            }
+
+            #responsive {
+                border-radius: 10px;
+            }
+
+            /*menu*/
+
+                #toggle-menu {
+                    display: block;
+                    }
+                
+
+                .menu-icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(../icon/menu.svg);
+                    background-size: cover;
+                    background-position: center;
+                    cursor: pointer;
+                    background-size: 120%;
+                    background-repeat: no-repeat;
+                    margin: 2% 0 0 2%;
+                }
+
+                .menu {
+                    display: none;
+                }
+                
+                #toggle-menu:checked ~ .menu {
+                    display: block;
+                }
+
+                #toggle-menu:checked ~ nav {
+                    background-color: #476600;
+                }
+
+                #toggle-menu {
+                    display: none;
+                }
+
+                .active {
+                    border-bottom: none;
+                }
+
+            /*submenu*/
+
+                .submenu-icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 10px;
+                    background-image: url(../icon/down.svg);
+                    background-size: cover;
+                    background-position: center;
+                    cursor: pointer;
+                    background-size: 85%;
+                    background-repeat: no-repeat;
+                }
+                
+                .submenu {
+                    display: none;
+                }
+                
+                #toggle-submenu:checked ~ .submenu {
+                    display: block;
+                }
+
+                #toggle-submenu {
+                    display: none;
+                }
+
+        /*Home*/
+
+            .Logo_home {
+                padding: 0;
+            }
+
+            #main_header {
+                grid-template-columns: 0.2fr 1fr 0.2fr;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            #main_header a img {
+                width: 60%;
+            }
+        
+            #main_header a {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                display: flex;
+                justify-content: center;
+            }
+        
+            #home_hanse {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            #home_hanse {
+                font-size: 3.5rem;
+            }
+
+            #extra_space, #extra_space2, #extra_space3 {
+                font-size: 1.6rem;
+            }
+
+            #p1, #p3, #p2 {
+                font-size: 1.1rem;
+            }
+
+            .contact-icon {
+                font-size: 1.3rem;
+            }
+                    
+            #home_img1 {
+                object-position: 0 0;
+                width: 100%;
+            }
+
+            #home_img2 {
+                object-position: 0 0;
+                width: 100%;
+            }
+
+            #p3 {
+                margin-bottom: 30%;
+            }
+            
+            #img_home {
+                margin-bottom: 30%;
+            }
+        
+        /*Belegung und Buchung*/
+
+            #draht {
+                margin: 0 5% 0 5%;
+            }
+
+            .Logo_grid {
+                grid-template-columns: 0.2fr 1fr 0.2fr;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            .Logo_grid a {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                display: flex;
+                justify-content: center;
+            }
+
+            .leistungs_h1 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            .Logo_leistungen {
+                padding: 0;
+            }
+
+            #buchungs_img {
+                width: 90%;
+                max-height: 350px;
+                overflow: hidden;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-self: center;
+            }
+            
+            #buchungs_img img {
+                width: auto;
+                height: auto;
+                object-position: center;
+            }
+
+            #form_h2 {
+                margin-top: 10%;
+                font-size: 2.3rem;
+            }
+
+            form {
+                display: flex;
+                width: 80%;
+                margin-top: 1%;
+                flex-direction: column;
+                margin-bottom: 15%;
+            }
+
+        /*Leistungen*/
+
+            .leistungs_h1 {
+                font-size: 3.5rem;
+            }
+
+            .Leist_t1 {
+                font-size: 1.1rem;
+            }
+
+            .Leist_t2 {
+                font-size: 1.8rem;
+            }
+
+            .extra_p {
+                font-size: 1.4rem;
+            }
+
+            .contact-icon_l {
+                font-size: 1.3rem;
+            }
+
+            #beide_kartsten {
+                flex-direction: column;
+            }
+
+            #beide_kartsten div {
+                margin: 3% 0 9% 0;
+            }
+
+            #form_div_l {
+                margin-bottom: 20%;
+            }
+    
+            .contact-icon_l {
+                background-position: right;
+            }
+
+        /*Hunde/Katzen*/
+
+            #HK_h1 {
+                font-size: 3.5rem;
+            }
+
+            #anordnung h2, #anordnung1 h2, #anordnung2 h2 {
+                font-size: 1.5rem;
+            }
+
+            #anordnung p, #anordnung2 p, #anordnung1 p {
+                font-size: 1.2rem;
+            }
+
+            #paket1 ol li, #paket2 ol li, #paket3 ol li {
+                font-size: 1.2rem;
+            }
+
+            .contact-icon_HK {
+                background-position: right;
+            }
+            
+            #mitt_für_H_und_K {
+                grid-template-columns: 0.2fr 1fr 0.2fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr 0.3fr 0.2fr;
+            }
+
+            #image1 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                align-self: normal;
+                justify-self: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #image2 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 4;
+                grid-row-end: 5;
+                align-self: normal;
+                justify-self: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #image3 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 6;
+                grid-row-end: 7;
+                justify-self: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #anordnung {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #anordnung1 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 3;
+                grid-row-end: 4;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #anordnung2 {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 5;
+                grid-row-end: 6;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .extra_p {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 7;
+                grid-row-end: 8;
+            }
+
+            #form_div_HK {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 8;
+                grid-row-end: 9;
+            }
+    }

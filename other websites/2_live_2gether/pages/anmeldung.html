@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>2 live 2gether/Studierende</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a id="Logo_a" href="../index.html">
+                    <img id="Logo_nav" src="../images/Bilder/Logo.svg" alt="Logo">
+                </a>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="fuersenioren.html">Für Senioren</a>
+                    <ul>
+                        <li><a href="#">Fragen &amp Antworten</a></li>
+                        <li><a href="#">Anmeldung</a></li>
+                        <li><a href="#">Zimmergesuche</a></li>
+                    </ul>
+                </li>
+                <li><a href="fuerjugentliche.html" class="active">Für Studierende</a>
+                    <ul>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="anmeldung.html" class="focus_unterseite">Anmeldung</a></li>
+                        <li><a href="zimmerangebote.html">Zimmerangebote</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Klönschnack</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutzerklärung</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="h1_anmel">
+            Anmeldung
+        </h1>
+        <article id="nr1" class="special-article">
+            <h1 class="große_zahl">1.</h1>
+            <h2>
+                Persönliche Angaben
+            </h2>
+            <ul class="erste_ul">
+                <li>Geschlecht</li>
+                <li>Name</li>
+                <input type="text" placeholder="dein Nachname">
+                <li>Vorname</li>
+                <input type="text" placeholder="dein Vorname">
+            </ul>
+            <ul class="zweite_ul">
+                <li>Straße</li>
+                <input type="text" placeholder="Straße">
+                <li>PLZ</li>
+                <input type="text" placeholder="Postleitzahl">
+                <li>Ort</li>
+                <input type="text" placeholder="Ort">
+            </ul>
+            <ul class="dritte_ul">
+                <li>Geburtsdatum</li>
+                <input type="date">
+                <li>Nationalität</li>
+                <input type="text" placeholder="Nationalität">
+                <li>Nummer des Studentenausweises</li>
+                <input type="text" placeholder="dein Studentenausweis">
+            </ul>
+        </article>
+        <article id="nr2" class="all-articles">
+            <h1 class="große_zahl">2.</h1>
+            <h2>
+                Angaben zum Studium
+            </h2>
+            <ul class="erste_ul">
+                <li>Hochschule</li>
+                <input type="text" placeholder="Hochschule">
+                <li>Fachrichtung</li>
+                <input type="text" placeholder="Fachrichtung">
+            </ul>
+            <ul class="zweite_ul">
+                <li>Semester</li>
+                <input type="text" placeholder="Semester">
+                <li>Voraussichtliches Ende des Studiums</li>
+                <input type="date">
+            </ul>
+            <ul class="dritte_ul">
+                <li>wie finanzierst du deinen Lebensunterhalt?</li>
+                <label for="select"></label>
+                    <select id="select">
+                        <option>BAföG</option>
+                        <option>Nebenjob</option>
+                        <option>Elternunterhalt</option>
+                        <option>Sonstiges</option>
+                    </select>
+            </ul>
+        </article>
+        <article id="nr3" class="all-articles">
+            <h1 class="große_zahl">3.</h1>
+            <h2>
+                Allgmeine Wünsche zur Wohnung
+            </h2>
+            <ul class="erste_ul">
+                <li>Gewünschter Einzugstermin</li>
+                <input type="date">
+                <li>Evtl. Auszugstermin</li>
+                <input type="date">
+            </ul>
+            <ul class="zweite_ul">
+                <li>Gewünschter wohnpartner</li>
+                <label for="select"></label>
+                    <select id="select">
+                        <option>Männlich</option>
+                        <option>Weiblich</option>
+                        <option>Paar</option>
+                        <option>Alleinstehend</option>
+                        <option>egal</option>
+                    </select>
+                <li>Wohnlage</li>
+                <label for="select"></label>
+                    <select id="select">
+                        <option>nur Univiertel</option>
+                        <option>Innenstadtbereich</option>
+                        <option>auch außerhalb</option>
+                    </select>
+            </ul>
+            <ul class="dritte_ul">
+                <li>Wohnmöglichkeit</li>
+                <label for="select"></label>
+                    <select id="select">
+                        <option>Möbliert</option>
+                        <option>Unmöbliert</option>
+                        <option>egal</option>
+                    </select>
+                <li>Welche Möbel möchtest du mitbringen</li>
+                <input type="text" placeholder="welche Möbel?">
+                <li>sonstige</li>
+                <input type="text" placeholder="noch weiteres?">
+            </ul>
+        </article>
+        <article id="nr4" class="all-articles">
+            <h1 class="große_zahl">4.</h1>
+            <h2>
+                Allgmeine Angaben:
+            </h2>
+            <ul class="erste_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Gibt es Erkrankungen, körperliche Einschränkungen die hier von bedeutung sind?</li>
+                </div>
+                <div>
+                    <li>Fährst du regelmäßig am Wochenende nach Hause?</li>
+                    <input type="text" placeholder="wie oft?" id="input">
+                    </div>
+                    <div id="abstand"> 
+                        <li>Bist du in den Semesterferien nicht in Hamburg?</li>
+                        <input type="text" placeholder="wie lange?" id="input">
+                    </div>
+            </ul>
+            <ul class="zweite_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Rauchst du?</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Hast du Tierhaar- oder andere Allergien?</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox" id="checkbox">
+                    <div class="flex-container">
+                      <div class="li-container">
+                        <li>Hast du ein Haustier, das du mitbringst?</li>
+                      </div>
+                      <div id="text-field">
+                        <input type="text" placeholder="welches?" id="input">
+                      </div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="dritte_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>hast du einen Führerschein?</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>besitzt du ein Auto?</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>hast du eine Privathaftpflichtversicherung?</li>
+                </div>
+            </ul>
+        </article>
+        <article id="nr5" class="all-articles">
+            <h1 class="große_zahl">5.</h1>
+            <h2>
+                Hilfeleistungen die du anbieten möchtest:
+            </h2>
+            <ul class="erste_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Gesellschaft leisten(z.B. vorlesen, mit fehrnsehen)</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Unterstützung im Haushalt (z.B. waschen, spülen, saugen)</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Gartenpflege</li>
+                </div>
+            </ul>
+            <ul class="zweite_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>einkauf</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">                   
+                    <li>Persönliche Begleitung außer Haus (z.B. Arzt, Behörde)</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">                   
+                    <li>Gemeinsame Aktivitäten</li>
+                </div>
+            </ul>
+            <ul class="dritte_ul">
+                <div class="kasten_neben">
+                    <input type="checkbox">                   
+                    <li>Haus hüten (z.B. auch Straßen fegen, Winterdienst, Mülltonnen rausstellen)</li>
+                </div>
+                <div class="kasten_neben">
+                    <input type="checkbox">
+                    <li>Sicherheit geben</li>
+                </div>
+            </ul>
+            <ul class="vierte_ul">
+                <li></li>
+            </ul>
+            <ul class="fuenfte_ul">
+                <input type="checkbox">
+                <li>bist du damit einverstanden...</li>
+            </ul>
+        </article>
+        <div class="kasten_neben der_eine">
+            <input type="checkbox">
+            <p>Ich habe die<a href="#">Datenschutzerklärung</a> gelesen</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div>
+                <img src="../images/Bilder/Logo.svg" alt="Logo">
+                <p>© 2023 2live 2gether. Alle Rechte vorbehalten.</p>
+            </div>
+            <ul>
+              <li><a class="focus" href="#">Kontakt</a></li>
+              <li><a  class="focus" href="#">Impressum</a></li>
+              <li><a  class="focus" href="#">Datenschutz</a></li>
+            </ul>
+          </div>
+    </footer>
+    <script src="../script/nav.js"></script>
+    <script src="../script/checkbox.js"></script>
+</body>
