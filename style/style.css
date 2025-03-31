@@ -357,17 +357,17 @@
         }
 
         #erreichbarkeit ol li:nth-child(1)::before {
-            content: url('../Icons/mail.svg');
+            content: url('../assets/image/icon/mail.svg');
             margin-right: 1%;
         }
 
         #erreichbarkeit ol li:nth-child(2)::before {
-            content: url('../Icons/Dc.svg');
+            content: url('../assets/image/icon/Dc.svg');
             margin-right: 1%;
         }
 
         #erreichbarkeit ol li:nth-child(3)::before {
-            content: url('../Icons/yt.svg');
+            content: url('../assets/image/icon/yt.svg');
             margin-right: 1%;
         }
         
