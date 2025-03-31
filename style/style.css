@@ -7,42 +7,71 @@
         /* font */
 
             @font-face {
-                src: url("../fonts/SignikaNegative-SemiBold.ttf") format("truetype");
-                font-family: "Signika Negative semibold";
-                font-weight: bold;
+                font-display: swap;
+                src: url("../assets/fonts/signika-negative-v21-latin-300.woff2") format("truetype");
+                font-family: "Signika_light";
+                font-weight: 300;
             }
-
+            
             @font-face {
-                src: url("../fonts/SignikaNegative-Bold.ttf") format("truetype");
-                font-family: "Signika Negative bold";
-                font-weight: "bolder";
+                font-display: swap;
+                src: url("../assets/fonts/signika-negative-v21-latin-500.woff2") format("truetype");
+                font-family: "Signika_semibold";
+                font-weight: 500;
             }
-
+            
             @font-face {
-                src: url("../fonts/SignikaNegative-Light.ttf") format("truetype");
-                font-family: "Signika Negative light";
-                font-weight: "light";
+                font-display: swap;
+                src: url("../assets/fonts/signika-negative-v21-latin-600.woff2") format("truetype");
+                font-family: "Signika_bold";
+                font-weight: 600;
             }
-
+            
             @font-face {
-                src: url("../fonts/SignikaNegative-Medium.ttf") format("truetype");
-                font-family: "Signika Negative medium";
-                font-weight: "medium";
+                font-display: swap;
+                src: url("../assets/fonts/signika-negative-v21-latin-700.woff2") format("truetype");
+                font-family: "Signika_medium";
+                font-weight: 700;
             }
-
+            
             @font-face {
-                src: url("../font/SignikaNegative-Regular.ttf") format("truetype");
-                font-family: "Signika Negative regular";
+                font-display: swap;
+                src: url("../assets/fonts/signika-negative-v21-latin-regular.woff2") format("truetype");
+                font-family: "Signika_regular";
             }
 
             strong {
-                font-family: "Signika Negative regular", Arial, Helvetica, sans-serif;
-                font-weight: bold;
+                font-family: "Signika_bold", Arial, Helvetica, sans-serif;
+                font-weight: 600;
             }
 
         li, p, h1, h2, a, h3 {
-            font-family: Signika Negative regular, Arial, Helvetica, sans-serif;
+            font-family: "Signika_regular", Arial, Helvetica, sans-serif;
             color: white;
+        }
+
+        html {
+            /* scroll-behavior: smooth; */
+            accent-color: #00D1FF;
+        }
+
+        /* CSS klassen */
+
+            .flex { display: flex; }
+            .spacebetween { justify-content: space-between; }
+            .spacearound { justify-content: space-around; }
+            .aligncenter { align-self: center; }
+            .justconcenter { justify-content: center; }
+            .pad_lr2 { padding: 0 2%; }
+            .pad_lr5 { padding: 0 5%; }
+            .txtcenter { text-align: center; }
+
+        :root {
+            --bg: #rgb(125, 0, 125);
+            --txt-dark: #000;
+            --txt-light: #fff;
+            --focus-text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            --focus-nav-shadow: 0 0 8px rgba(221, 0, 255, 0.6), 0 0 10px rgba(221, 0, 255, 0.8), 0 0 16px rgba(221, 0, 255, 1);
         }
 
         body {
@@ -414,6 +443,26 @@
 
         /* Webseiten */
 
+        /* Scroll-Animation von 
+            https://www.sliderrevolution.com/resources/css-animations-on-scroll/ */
+
+            @keyframes enter-animation {
+                0% {
+                transform: translateY(100px);
+                opacity: 0;
+                }
+                100% {
+                transform: translateY(0);
+                opacity: 1;
+                }
+            }
+            
+            @media (prefers-reduced-motion: no-preference) {
+                .item-animation {
+                animation: enter-animation 1.2s 1;
+                }
+            }
+
             #Webseiten {
                 display: flex;
                 justify-content: center;
@@ -522,102 +571,130 @@
                 width: 100%;
               }
 
+              .down {
+                margin-bottom: 5%;
+              }
+
         /* Videoschnitt */
 
-            /* Scroll-Animation von 
-            https://www.sliderrevolution.com/resources/css-animations-on-scroll/ */
-
-                @keyframes enter-animation {
-                    0% {
-                    transform: translateY(100px);
-                    opacity: 0;
-                    }
-                    100% {
-                    transform: translateY(0);
-                    opacity: 1;
-                    }
-                }
-                
-                @media (prefers-reduced-motion: no-preference) {
-                    .item-animation {
-                    animation: enter-animation 1.2s 1;
-                    }
-                }
-
-            #Videoschnitt {
-                display: flex;
-                justify-content: center;
-            }
+        .header_h1 {
+            color: white;
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 7%;
+            transition: text-shadow 0.3s;
+            font-family: "Signika_regular";
+        }
+    
+        #videoschnitt {
+            display: flex;
+            justify-content: center;
+        }
+    
+        #content {
+            width: 90%;
+            background-color: rgb(125, 0, 125);
+            border-radius: 5px;
+            margin-bottom: 5%;
+        }
+    
+        #content article div:first-child {
+            display: grid;
+            grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+        }
+    
+        #content h2 {
+            grid-column: 2;
+            color: white;
+            font-size: 2.4rem;
+            margin: 20% 5% 5% 0;
+        }
         
-            #video_content {
-                width: 90%;
-                background-color: rgb(125, 0, 125);
-                border-radius: 5px;
-                margin-bottom: 5%;
-            }
-
-            #video_content article div {
-                display: grid;
-                grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-                grid-template-rows: 1fr;
-                grid-gap: 10px;
-            }
-
-            #video_content article h2 {
-                grid-column: 2;
-                color: white;
-                font-size: 2.4rem;
-                margin: 20% 5% 5% 0;
-            }
-
-            #video_content article div video {
-                grid-column: 2;
-                border-radius: 5px;
-            }
-
-            video {
-                width: 100%;
-            }
-
-            .beschreibungs_p {
-                grid-row: 1;
-                grid-column: 3;
-                color: white;
-                display: flex;
-                align-self: center;
-                margin-left: 5%;
-                font-size: 1.3rem;
-            }
-
-            .song_p {
-                grid-row: 1;
-                grid-column: 3;
-                color: white;
-                display: flex;
-                align-self: end;
-                margin-left: 5%;
-                font-size: 1.3rem;
-            }
-
-            #video_content article div h3 {
-                grid-column: 3;
-                grid-row: 1;
-                color: white;
-                margin: 3% 0 0 5%;
-            }
-
-            .down {
-                margin-bottom: 5%;
-            }
-
-            .Vs_yt_a {
-                margin-left: 5%;
-                height: fit-content;
-            }
-
-            .Vs_yt_img {
-                width: 70px;
-            }
+        h2 span {
+            text-shadow: 0;
+            transition: .5s .1s;
+            font-family: "Signika_semibold";
+            font-size: 2.1rem;
+        }
+        
+        .showS {
+            text-shadow: var(--focus-text-shadow);
+            font-size: 2.3rem;
+        }
+        
+        #content article > div:last-child {
+            display: grid;
+            grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+        }
+    
+        #content video {
+            grid-column: 2;
+            border-radius: 5px;
+            width: 100%;
+        }
+    
+        #content h3 {
+            grid-column: 3;
+            grid-row: 1;
+            color: white;
+            margin: 3% 0 0 5%;
+            font-family: "Signika_regular";
+            font-size: 1.2rem;
+            transform: translateY(-10px);
+        }
+    
+        .beschreibung, .song {
+            grid-row: 1;
+            grid-column: 3;
+            color: white;
+            display: flex;
+            align-self: center;
+            margin-left: 5%;
+            font-size: 1.3rem;
+            font-family: "Signika_light";
+            font-size: 1.2rem;
+            transform: translateY(-10px);
+        }
+    
+        .song {
+            font-family: "Signika_regular";
+            align-self: end;
+        }
+    
+        .yt_link {
+            margin-left: 5%;
+            height: fit-content;
+        }
+    
+        .yt_img {
+            width: 70px;
+        }
+    
+        #content article:last-of-type {
+            margin-bottom: 5%;
+        }
+    
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .showV {
+            visibility: visible;
+            opacity: 1;
+        }
+    
+        .showT1, .showT2, .showT3 {
+            transform: translateY(0px)!important;
+        }
+    
+        .showT1 { transition: .3s .2s; }
+        .showT2 { transition: .3s .3s; }
+        .showT3 { transition: .3s .4s; }
         
         /* Zeichnugnen */
 
@@ -718,7 +795,7 @@
                     margin: 20% 5% 5% 0;
                 }
 
-                .beschreibung {
+                .beschreibung_sonst {
                     grid-row: 1;
                     grid-column-start: 2;
                     grid-column-end: 4;
