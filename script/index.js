@@ -4,20 +4,38 @@
 function updateLastModifiedMeta() {
     let metaTag = document.querySelector('meta[name="last-modified"]');
 
-    // Falls das Meta-Tag nicht existiert, erstelle es
-    if (!metaTag) {
-        metaTag = document.createElement("meta");
-        metaTag.setAttribute("name", "last-modified");
-        document.head.appendChild(metaTag);
-    }
-
     // Aktuelles Datum und Uhrzeit im ISO-Format
     const now = new Date();
     const isoString = now.toISOString(); // Format: YYYY-MM-DDTHH:MM:SSZ
 
+    if (!metaTag) {
+        // Neues Meta-Tag erstellen
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("name", "last-modified");
+
+        // Alle vorhandenen Meta-Tags suchen
+        const allMetaTags = document.head.querySelectorAll("meta");
+
+        if (allMetaTags.length > 0) {
+            // Direkt nach dem letzten vorhandenen <meta> einfügen
+            allMetaTags[allMetaTags.length - 1].after(metaTag);
+        } else {
+            // Falls es keine anderen Meta-Tags gibt, einfach in <head> einfügen
+            document.head.prepend(metaTag);
+        }
+    }
+
     // Meta-Tag aktualisieren
     metaTag.setAttribute("content", isoString);
 }
+
+
+
+
+/////////////////erstellen der video-elementen/////////////////////
+
+// Funktion beim Laden der Seite aufrufen
+updateLastModifiedMeta();
 
 // Funktion beim Laden der Seite aufrufen
 updateLastModifiedMeta();
