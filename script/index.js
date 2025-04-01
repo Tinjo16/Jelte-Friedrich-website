@@ -1,3 +1,6 @@
+'use strict';
+
+// add server for Wrangler.jsonc
 
 addEventListener('fetch', event => {
     event.respondWith(handleRequest(event.request))
@@ -7,7 +10,38 @@ addEventListener('fetch', event => {
     return new Response('Hello from Cloudflare Workers!', { status: 200 })
   }  
 
-'use strict';
+
+// password protected directory
+
+addEventListener("fetch", event => {
+    event.respondWith(handleRequest(event.request));
+  });
+  
+  async function handleRequest(request) {
+    const url = new URL(request.url);
+  
+    // Falls das Verzeichnis "/protected" ist
+    if (url.pathname.startsWith("../Pages/family/main.html")) {
+      const auth = request.headers.get("Authorization");
+  
+      // Nutzername und Passwort (einfacher Schutz)
+      const username = "admin";
+      const password = "admin";
+      const encoded = btoa(`${username}:${password}`);
+  
+      if (!auth || auth !== `Basic ${encoded}`) {
+        return new Response("Unauthorized", {
+          status: 401,
+          headers: {
+            "WWW-Authenticate": 'Basic realm="Secure Area"'
+          }
+        });
+      }
+    }
+  
+    return fetch(request);
+  }
+  
 
 // Erstellen der Dom-Video-Elemente
 const domMapping = () => {
