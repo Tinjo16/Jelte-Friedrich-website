@@ -8,7 +8,7 @@ addEventListener("fetch", event => {
     const url = new URL(request.url);
   
     // Falls das Verzeichnis "/protected" ist
-    if (url.pathname.startsWith("https://tinjo16.github.io/jelte-friedrich-website/Pages/family/main.html")) {
+    if (url.pathname.startsWith("/Pages/family/main.html")) {
       const auth = request.headers.get("Authorization");
   
       // Nutzername und Passwort (einfacher Schutz)
