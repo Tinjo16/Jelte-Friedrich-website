@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="robots" content="noindex">
     <meta name="last-modified" content="2025-03-31T19:57:00Z">
-    <title>Kontakt JF</title>
+    <title>Authentifikation JF</title>
     <link rel="icon" type="svg+xml" href="../assets/image/icon/JF.svg">
     <link rel="icon" type="png" href="../assets/image/icon/JF.png">
     <link rel="stylesheet" href="../style/reset.css">
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/auth.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,21 +37,20 @@
                     <ul>
                         <li class="focus"><a href="#">Kontakt</a></li>
                         <li><a href="impressum.html">Imperessum</a></li>
-                        <li><a href="./auth.html">Family Website</a></li>
+                        <li><a href="#">Family Website</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 class="header_h1 effect">Kontakt</h1>
-        <article id="contact_grid">
-            <div id="erreichbarkeit" >
-                <ol>
-                    <li>E-Mail &#58; tinjo.ff@gmail.com</li>
-                    <li>Discord | Nutzertag&#58; fn_2817</li>
-                    <li><a href="https://www.youtube.com/@tinjo6191" target="_blank">Youtube</a></li>
-                </ol>
+        <h1 class="header_h1 effect">Authentifikation</h1>
+        <article>
+            <div id="login">
+                <h2>Passwortschutz</h2>
+                <input type="password" id="password" placeholder="Passwort eingeben">
+                <button onclick="checkPassword()">Login</button>
+                <p id="message"></p>
             </div>
         </article>
     </div>
