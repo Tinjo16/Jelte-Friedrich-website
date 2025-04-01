@@ -3,7 +3,7 @@
 
 async function setLastModifiedMeta() {
     try {
-        const response = await fetch('/build-info.txt');
+        const response = await fetch('../build-info.txt');
         if (!response.ok) throw new Error("Datei nicht gefunden");
 
         const lastModified = await response.text();
