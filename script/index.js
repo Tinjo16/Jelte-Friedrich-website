@@ -1,33 +1,35 @@
 'use strict';
 
 
-function updateLastModifiedMeta() {
-    let metaTag = document.querySelector('meta[name="last-modified"]');
+    async function setLastModifiedMeta() {
+        try {
+            const response = await fetch('build-info.txt');
+            if (!response.ok) throw new Error("Datei nicht gefunden");
 
-    // Aktuelles Datum und Uhrzeit im ISO-Format
-    const now = new Date();
-    const isoString = now.toISOString(); // Format: YYYY-MM-DDTHH:MM:SSZ
+            const lastModified = await response.text();
+            let metaTag = document.querySelector('meta[name="last-modified"]');
 
-    if (!metaTag) {
-        // Neues Meta-Tag erstellen
-        metaTag = document.createElement("meta");
-        metaTag.setAttribute("name", "last-modified");
+            if (!metaTag) {
+                metaTag = document.createElement("meta");
+                metaTag.setAttribute("name", "last-modified");
 
-        // Alle vorhandenen Meta-Tags suchen
-        const allMetaTags = document.head.querySelectorAll("meta");
+                // Alle Meta-Tags suchen und direkt danach einfügen
+                const allMetaTags = document.head.querySelectorAll("meta");
+                if (allMetaTags.length > 0) {
+                    allMetaTags[allMetaTags.length - 1].after(metaTag);
+                } else {
+                    document.head.prepend(metaTag);
+                }
+            }
 
-        if (allMetaTags.length > 0) {
-            // Direkt nach dem letzten vorhandenen <meta> einfügen
-            allMetaTags[allMetaTags.length - 1].after(metaTag);
-        } else {
-            // Falls es keine anderen Meta-Tags gibt, einfach in <head> einfügen
-            document.head.prepend(metaTag);
+            metaTag.setAttribute("content", lastModified.trim());
+        } catch (error) {
+            console.error("Fehler beim Laden von build-info.txt:", error);
         }
     }
 
-    // Meta-Tag aktualisieren
-    metaTag.setAttribute("content", isoString);
-}
+    setLastModifiedMeta();
+
 
 
 
