@@ -1,5 +1,27 @@
 'use strict';
 
+
+function updateLastModifiedMeta() {
+    let metaTag = document.querySelector('meta[name="last-modified"]');
+
+    // Falls das Meta-Tag nicht existiert, erstelle es
+    if (!metaTag) {
+        metaTag = document.createElement("meta");
+        metaTag.setAttribute("name", "last-modified");
+        document.head.appendChild(metaTag);
+    }
+
+    // Aktuelles Datum und Uhrzeit im ISO-Format
+    const now = new Date();
+    const isoString = now.toISOString(); // Format: YYYY-MM-DDTHH:MM:SSZ
+
+    // Meta-Tag aktualisieren
+    metaTag.setAttribute("content", isoString);
+}
+
+// Funktion beim Laden der Seite aufrufen
+updateLastModifiedMeta();
+
 // Erstellen der Dom-Video-Elemente
 const domMapping = () => {
 
