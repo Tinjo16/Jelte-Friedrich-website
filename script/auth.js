@@ -1,6 +1,8 @@
 
+    // code bereitgestellt von ChatGPT
+    
     function checkPassword() {
-        const correctPassword = "admin"; // Dein Passwort hier
+        const correctPassword = "admin9604"; // Dein Passwort hier
         const userInput = document.getElementById("password").value;
 
         if (userInput === correctPassword) {

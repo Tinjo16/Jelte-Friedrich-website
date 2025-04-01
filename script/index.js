@@ -1,5 +1,6 @@
 'use strict';
 
+// code bereitgestellt von ChatGPT
 
 async function setLastModifiedMeta() {
     try {
