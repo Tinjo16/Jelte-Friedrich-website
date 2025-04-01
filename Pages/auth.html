@@ -43,13 +43,17 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main_auth">
         <h1 class="header_h1 effect">Authentifikation</h1>
-        <article>
+        <article id="auth">
             <div id="login">
-                <h2>Passwortschutz</h2>
-                <input type="password" id="password" placeholder="Passwort eingeben">
-                <button onclick="checkPassword()">Login</button>
+                <h2>Diese Seite befindet sich derzeitig noch in berarbeitung</h2>
+                <p>bitte geben Sie ein Passwort ein um fortzufahren</p>
+                <input type="password" id="password" placeholder="Passwort">
+                <button onclick="checkPassword()" type="submit">
+                    <span>Weiter</span>
+                    <span class="verlauf"></span>
+                </button>
                 <p id="message"></p>
             </div>
         </article>

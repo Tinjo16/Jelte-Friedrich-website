@@ -877,7 +877,95 @@
                 #pdf_1 a:hover::after, #pdf_2 a:hover::after, #pdf_3 a:hover::after, #pdf_4 a:hover::after {
                     width: 100%;
                 }
+            
+            /* Authentifikation */
 
+                #main_auth {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+                }
+
+                #auth {
+                    background-color: rgb(125, 0, 125);
+                    display: flex;
+                    justify-content: center;
+                    width: fit-content;
+                    align-self: center;
+                    padding: 10% 20%;
+                    border-radius: 8px;
+                }
+
+                #auth h2 {
+                    font-size: 2rem;
+                    padding-bottom: 2%;
+                }
+
+                #auth p {
+                    font-family: "Signika_light";
+                    padding-bottom: 1%;
+                }
+
+                input, textarea, button {
+                    margin-top: 1%;
+                    width: 18vw;
+                    font-size: 1rem;
+                    border: black solid;
+                    border-radius: 4px;
+                    transition: 300ms;
+                    background: var(--bg);
+                    padding: 1%;
+                }
+
+                input:focus {
+                    border: #ad5b04 solid;
+                    background: white;
+                }
+                
+                #login {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                button {
+                    position: relative;
+                    overflow: hidden;
+                    height: 50px;
+                    cursor: pointer;
+                    width: 19.3vw;
+                    margin-bottom: 2%;
+                    color: white;
+                }
+    
+                button span {
+                    position: absolute;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    z-index: 1;
+                }
+    
+                .verlauf {
+                    background: linear-gradient(131deg, rgb(125,0,125) 43%, #ad5b04 43%);
+                    transform: translateX(-15%);
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: -80px;
+                    transition: 1s;
+                    position: absolute;
+                    z-index: 0;
+                }
+    
+                button:hover .verlauf {
+                    transform: translateX(10%);
+                }
+    
+                button:hover {
+                    border: #ad5b04 solid;
+                }
+                
 /* mobile */
     
     @media only screen and (max-width: 499px){

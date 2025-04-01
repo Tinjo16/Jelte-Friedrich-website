@@ -1,6 +1,7 @@
 'use strict';
 
 // code bereitgestellt von ChatGPT
+// Letzte bearbeitung der Website, automatische Meta Tag erstellung für das derzeitige Datum
 
 async function setLastModifiedMeta() {
     try {
@@ -14,7 +15,6 @@ async function setLastModifiedMeta() {
             metaTag = document.createElement("meta");
             metaTag.setAttribute("name", "last-modified");
 
-            // Alle Meta-Tags suchen und direkt danach einfügen
             const allMetaTags = document.head.querySelectorAll("meta");
             if (allMetaTags.length > 0) {
                 allMetaTags[allMetaTags.length - 1].after(metaTag);
