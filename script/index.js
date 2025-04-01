@@ -30,9 +30,6 @@ async function setLastModifiedMeta() {
 
 setLastModifiedMeta();
 
-console.log('hello world')
-
-
 
 
 
