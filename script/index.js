@@ -1,46 +1,40 @@
 'use strict';
 
 
-    async function setLastModifiedMeta() {
-        try {
-            const response = await fetch('build-info.txt');
-            if (!response.ok) throw new Error("Datei nicht gefunden");
+async function setLastModifiedMeta() {
+    try {
+        const response = await fetch('/build-info.txt');
+        if (!response.ok) throw new Error("Datei nicht gefunden");
 
-            const lastModified = await response.text();
-            let metaTag = document.querySelector('meta[name="last-modified"]');
+        const lastModified = await response.text();
+        let metaTag = document.querySelector('meta[name="last-modified"]');
 
-            if (!metaTag) {
-                metaTag = document.createElement("meta");
-                metaTag.setAttribute("name", "last-modified");
+        if (!metaTag) {
+            metaTag = document.createElement("meta");
+            metaTag.setAttribute("name", "last-modified");
 
-                // Alle Meta-Tags suchen und direkt danach einfügen
-                const allMetaTags = document.head.querySelectorAll("meta");
-                if (allMetaTags.length > 0) {
-                    allMetaTags[allMetaTags.length - 1].after(metaTag);
-                } else {
-                    document.head.prepend(metaTag);
-                }
+            // Alle Meta-Tags suchen und direkt danach einfügen
+            const allMetaTags = document.head.querySelectorAll("meta");
+            if (allMetaTags.length > 0) {
+                allMetaTags[allMetaTags.length - 1].after(metaTag);
+            } else {
+                document.head.prepend(metaTag);
             }
-
-            metaTag.setAttribute("content", lastModified.trim());
-        } catch (error) {
-            console.error("Fehler beim Laden von build-info.txt:", error);
         }
-    }
 
-    setLastModifiedMeta();
+        metaTag.setAttribute("content", lastModified.trim());
+    } catch (error) {
+        console.error("Fehler beim Laden von build-info.txt:", error);
+    }
+}
+
+setLastModifiedMeta();
 
 
 
 
 
 /////////////////erstellen der video-elementen/////////////////////
-
-// Funktion beim Laden der Seite aufrufen
-updateLastModifiedMeta();
-
-// Funktion beim Laden der Seite aufrufen
-updateLastModifiedMeta();
 
 // Erstellen der Dom-Video-Elemente
 const domMapping = () => {
