@@ -1,6 +1,6 @@
 {
     "name": "jelte-friedrich-website",
-    "main": "./script/index.js",
+    "main": "./script/worker.js",
     "workers_dev": true,
     "account_id": "e2475363741586d4bdb66cd7717af13d",
     "compatibility_date": "2025-04-01"
