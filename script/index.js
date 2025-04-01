@@ -21,7 +21,7 @@ addEventListener("fetch", event => {
     const url = new URL(request.url);
   
     // Falls das Verzeichnis "/protected" ist
-    if (url.pathname.startsWith("../Pages/family/main.html")) {
+    if (url.pathname.startsWith("../Pages/family/")) {
       const auth = request.headers.get("Authorization");
   
       // Nutzername und Passwort (einfacher Schutz)
@@ -29,7 +29,7 @@ addEventListener("fetch", event => {
       const password = "admin";
       const encoded = btoa(`${username}:${password}`);
   
-      if (!auth || auth !== `Basic ${encoded}`) {
+      if (!auth || auth !== `Basic ${encoded}`) { 
         return new Response("Unauthorized", {
           status: 401,
           headers: {
