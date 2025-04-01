@@ -1,0 +1,5 @@
+{
+    "name": "worker-name",
+    "type": "javascript",    // oder "typescript", falls du TypeScript nutzt
+    "main": "./script/index.js" // Pfad zu deinem Worker-Skript
+}
