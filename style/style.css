@@ -78,6 +78,10 @@
             overflow-x: hidden;
         }
 
+        /* strong {
+            font-family: "Signika_semibold";
+        } */
+
         nav {
             background: linear-gradient(90.00deg, #7D007D 6%, #FFF500 45%, #00D1FF 85%);
             border-bottom: 10px solid #000000;
@@ -301,6 +305,7 @@
             color: white;
             margin-left: 2%;
             padding-top: 3%;
+            font-family: "Signika_light";
         }
 
         .animated-div {
