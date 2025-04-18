@@ -584,6 +584,21 @@
 
         /* Videoschnitt */
 
+        #einleitung {
+            display: grid;
+            grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 10px;
+            margin-top: 10%;
+        }
+
+        #einleitung p {
+            grid-column: 2 / 4;
+            margin: 0 10% 0 10%;
+            font-size: 1.2rem;
+            font-family: "Signika_light";
+        }
+
         .header_h1 {
             color: white;
             font-size: 4rem;
@@ -808,6 +823,7 @@
                     grid-column-end: 4;
                     color: white;
                     font-size: 1.3rem;
+                    font-family: "Signika_light";
                 }
 
                 #son_content article div div {
