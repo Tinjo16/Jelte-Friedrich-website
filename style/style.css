@@ -680,6 +680,7 @@
             font-family: "Signika_light";
             font-size: 1.2rem;
             transform: translateY(-10px);
+            line-height: 20px;
         }
     
         .song {
