@@ -851,6 +851,7 @@
 
                 .beschreibung_sonst p {
                     margin-top: 2%;
+                    font-family: "Signika_light";
                 }
                 
                 .beschreibung_sonst p:last-of-type {
