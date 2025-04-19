@@ -441,11 +441,11 @@
             display: flex;
             width: 100%;
             justify-content: center;
+            transition: 0.6s;
         }
 
         .vorschau:hover {
             scale: 120%; 
-            transition: 0.6s;
         }
 
         /* Webseiten */
